@@ -1,0 +1,27 @@
+.interests-page {
+    width: 100%;
+}
+
+/* TITLE */
+.section-title {
+    font-size: 3.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #343a40;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+}
+
+/* TEXT */
+.interest-text {
+    color: #6c757d;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+}
+.interest-text::before {
+    content: "•";
+    color: #bd5d38;
+    margin-right: 8px;
+}

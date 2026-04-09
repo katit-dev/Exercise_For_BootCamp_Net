@@ -1,0 +1,16 @@
+<div class="exp-item">
+    <div class="exp-content">
+        <h3>@Item.Position</h3>
+        <div class="company">@Item.Company</div>
+        <p>@Item.Description</p>
+    </div>
+
+    <div class="exp-time " style="text-align: left;">
+        @Item.Time
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public ExperienceVM Item { get; set; }
+}
