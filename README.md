@@ -30,8 +30,6 @@ Each folder represents exercises completed in a specific session.
 - Add / delete products  
 - Calculate expected revenue  
 
----
-
 ### 🔹 BT_Buoi21  
 **Blazor Web Application – Resume (CV Online)**
 
@@ -43,6 +41,8 @@ A personal resume website built using **Blazor Components** with a modern UI lay
 - Data binding using Blazor
 - Responsive layout
 - Custom styling with CSS
+
+---
 
 #### 🛠 Technologies Used
 - Blazor (.NET)
