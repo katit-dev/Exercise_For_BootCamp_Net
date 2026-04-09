@@ -28,8 +28,28 @@ Each folder represents exercises completed in a specific session.
 
 - Product management system  
 - Add / delete products  
-- Calculate expected revenue
+- Calculate expected revenue  
 
+---
+
+### 🔹 BT_Buoi21  
+**Blazor Web Application – Resume (CV Online)**
+
+A personal resume website built using **Blazor Components** with a modern UI layout.
+
+#### ✨ Features
+- Sidebar navigation (About, Experience, Education, Skills, Interests, Awards)
+- Component-based architecture
+- Data binding using Blazor
+- Responsive layout
+- Custom styling with CSS
+
+#### 🛠 Technologies Used
+- Blazor (.NET)
+- Razor Components
+- HTML / CSS
+- Devicon (for skill icons)
+- Font Awesome (for awards icons)
 
 ---
 
@@ -40,7 +60,9 @@ Each folder represents exercises completed in a specific session.
 - ✅ Improve problem-solving skills  
 - ✅ Write clean and modular code  
 - ✅ Prepare for backend development  
-- ✅ Work with collection types (Array, List, Dictionary)
+- ✅ Work with collection types (Array, List, Dictionary)  
+- ✅ Build UI using Blazor  
+- ✅ Understand component-based architecture  
 
 ---
 
@@ -56,6 +78,7 @@ Each folder represents exercises completed in a specific session.
 
 ![.NET](https://img.shields.io/badge/.NET-6.0-purple)
 ![C#](https://img.shields.io/badge/C%23-Programming-blue)
+![Blazor](https://img.shields.io/badge/Blazor-WebApp-orange)
 
 ---
 
@@ -63,6 +86,8 @@ Each folder represents exercises completed in a specific session.
 
 - C#  
 - .NET  
+- Blazor  
+- HTML / CSS  
 - Git & GitHub  
 
 ---
