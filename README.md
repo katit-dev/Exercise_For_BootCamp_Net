@@ -33,23 +33,18 @@ Each folder represents exercises completed in a specific session.
 ### 🔹 BT_Buoi21  
 **Blazor Web Application – Resume (CV Online)**
 
-A personal resume website built using **Blazor Components** with a modern UI layout.
+- Sidebar navigation  
+- Component-based structure  
+- Data binding in Blazor  
+- Responsive layout  
 
-#### ✨ Features
-- Sidebar navigation (About, Experience, Education, Skills, Interests, Awards)
-- Component-based architecture
-- Data binding using Blazor
-- Responsive layout
-- Custom styling with CSS
+### 🔹 BT_Buoi22  
+**Blazor – Car Exercise (State & UI Interaction)**
 
----
-
-#### 🛠 Technologies Used
-- Blazor (.NET)
-- Razor Components
-- HTML / CSS
-- Devicon (for skill icons)
-- Font Awesome (for awards icons)
+- Change car image based on selected color  
+- Handle state with C# variables  
+- Dynamic UI update (re-render)  
+- Conditional styling for active button  
 
 ---
 
