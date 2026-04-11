@@ -46,6 +46,17 @@ Each folder represents exercises completed in a specific session.
 - Dynamic UI update (re-render)  
 - Conditional styling for active button  
 
+### 🔹 BT_Buoi23  
+**Blazor – Form & Validation**
+
+- Build Customer Contact Form and Course Registration Form  
+- Apply two-way data binding with `@bind`  
+- Use `EditForm` with `DataAnnotationsValidator`  
+- Implement validation using DataAnnotations (`Required`, `EmailAddress`, `MinLength`, `RegularExpression`)  
+- Handle various input types (text, textarea, select, radio, checkbox, date)  
+- Configure routing for multiple pages  
+- Create navigation menu (NavMenu) for page navigation  
+
 ---
 
 ## 🎯 Learning Goals
