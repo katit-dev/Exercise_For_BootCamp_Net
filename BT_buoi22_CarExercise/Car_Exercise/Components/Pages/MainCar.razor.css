@@ -1,0 +1,50 @@
+.car-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
+
+.color-btn {
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    padding: 14px 24px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    width: 300px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    transition: all 0.2s ease;
+}
+
+.color-btn img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.color-btn:hover {
+    border-color: #999;
+}
+
+.color-btn.active.red {
+    background-color: #ff2b2b;
+    color: white;
+}
+
+.color-btn.active.silver {
+    background-color: #a9a9a9;
+    color: white;
+}
+
+.color-btn.active.black {
+    background-color: #000;
+    color: white;
+}

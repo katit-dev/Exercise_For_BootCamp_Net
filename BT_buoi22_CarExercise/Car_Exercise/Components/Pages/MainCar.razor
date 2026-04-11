@@ -1,0 +1,59 @@
+@page "/car"
+@page "/"
+
+<div class="container py-4">
+    <h1 class="mb-4">Car Exercise Page</h1>
+
+    <div class="row align-items-center">
+        <div class="col-6">
+            <img class="car-image" src="@car.Img" alt="@car.Color" />
+        </div>
+
+        <div class="col-6 d-flex flex-column justify-content-center">
+            @foreach (var item in cars)
+            {
+                <button class="color-btn @item.Color @(car.Color == item.Color ? "active" : "")"
+                        @onclick='() => ChangeCar(item)'>
+                    <img src="@item.Icon" alt="@item.Color" />
+                    @(char.ToUpper(item.Color[0]) + item.Color.Substring(1) + " color")
+                </button>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    CarVM car = new CarVM
+    {
+        Color = "black",
+        Img = "img/black-car.jpg",
+        Icon = "icons/icon-black.jpg"
+    };
+
+    List<CarVM> cars = new List<CarVM>
+    {
+        new CarVM
+        {
+            Color = "red",
+            Img = "img/red-car.jpg",
+            Icon = "icons/icon-red.jpg"
+        },
+        new CarVM
+        {
+            Color = "silver",
+            Img = "img/silver-car.jpg",
+            Icon = "icons/icon-silver.jpg"
+        },
+        new CarVM
+        {
+            Color = "black",
+            Img = "img/black-car.jpg",
+            Icon = "icons/icon-black.jpg"
+        }
+    };
+
+    void ChangeCar(CarVM newCar)
+    {
+        car = newCar;
+    }
+}
