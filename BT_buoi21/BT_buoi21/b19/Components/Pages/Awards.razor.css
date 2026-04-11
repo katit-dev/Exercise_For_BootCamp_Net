@@ -1,0 +1,23 @@
+.award-list {
+    padding-left: 0;
+    margin: 0;
+    list-style: none !important;
+}
+
+.award-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+/* ICON */
+.award-list i {
+    background: linear-gradient(45deg, #f6d365, #fda085);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.3rem;
+}
+

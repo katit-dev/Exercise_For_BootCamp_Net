@@ -1,0 +1,30 @@
+@page "/education"
+
+<section>
+    <h2 class="section-title">Education</h2>
+
+    @foreach (var item in educations)
+    {
+        <EducationItem Item="item" />
+    }
+</section>
+
+@code {
+    List<EducationVM> educations = new()
+    {
+        new EducationVM
+        {
+            School = "University of Colorado Boulder",
+            Degree = "Bachelor of Science - Computer Science",
+            Description = "GPA: 3.23",
+            Time = "August 2006 - May 2010"
+        },
+        new EducationVM
+        {
+            School = "James Buchanan High School",
+            Degree = "Technology Magnet Program",
+            Description = "GPA: 3.56",
+            Time = "August 2002 - May 2006"
+        }
+    };
+}

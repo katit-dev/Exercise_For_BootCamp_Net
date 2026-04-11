@@ -1,0 +1,68 @@
+.skills-page {
+    width: 100%;
+
+}
+
+.section-title {
+    font-size: 3.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #343a40;
+    margin-bottom: 4rem;
+    line-height: 1.1;
+}
+
+.skills-block {
+    margin-bottom: 3rem;
+}
+
+.sub-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.icon-list i {
+    font-size: 3rem;
+    color: #6c757d;
+    transition: transform 0.2s ease;
+}
+
+.icon-list i:hover {
+    transform: scale(1.15);
+}
+
+.workflow-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.workflow-list li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.9rem;
+    color: #6c757d;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.workflow-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #bd5d38;
+    font-weight: 700;
+}

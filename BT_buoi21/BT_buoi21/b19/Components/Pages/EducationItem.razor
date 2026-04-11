@@ -1,0 +1,16 @@
+<div class="edu-item">
+    <div class="edu-content">
+        <h3>@Item.School</h3>
+        <div class="degree">@Item.Degree</div>
+        <p>@Item.Description</p>
+    </div>
+
+    <div class="edu-time">
+        @Item.Time
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public EducationVM Item { get; set; } = new();
+}
