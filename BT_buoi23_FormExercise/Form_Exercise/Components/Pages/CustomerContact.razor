@@ -1,0 +1,70 @@
+@page "/customer-contact"
+@page "/"
+
+<PageTitle>Customer Contact</PageTitle>
+
+<div class="container">
+    <div class="row">
+        <h4>Customer Contact Form</h4>
+
+        <div class="col-6">
+            <EditForm Model="@model">
+                <DataAnnotationsValidator />
+
+                <div class="mb-3">
+                    <label>Full Name</label>
+                    <input class="form-control" @bind="model.FullName" />
+                    <ValidationMessage For="@(() => model.FullName)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Email</label>
+                    <input class="form-control" @bind="model.Email" />
+                    <ValidationMessage For="@(() => model.Email)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Phone</label>
+                    <input class="form-control" @bind="model.Phone" />
+                    <ValidationMessage For="@(() => model.Phone)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Address</label>
+                    <input class="form-control" @bind="model.Address" />
+                    <ValidationMessage For="@(() => model.Address)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Message</label>
+                    <textarea class="form-control" @bind="model.Message"></textarea>
+                    <ValidationMessage For="@(() => model.Message)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Service</label>
+                    <select class="form-select" @bind="model.Service">
+                        <option value="">Choose...</option>
+                        <option>Web Design</option>
+                        <option>SEO</option>
+                        <option>Marketing</option>
+                    </select>
+                    <ValidationMessage For="@(() => model.Service)" />
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" @bind="model.Agree" />
+                    <label>I agree</label>
+                    <ValidationMessage For="@(() => model.Agree)" />
+                </div>
+
+                <button class="btn btn-primary w-100">Submit</button>
+            </EditForm>
+        </div>
+
+    </div>
+</div>
+
+@code {
+    CustomerContactModel model = new();
+}

@@ -1,0 +1,82 @@
+@page "/course-registration"
+@using Form_Exercise.Models
+
+<PageTitle>Course Registration</PageTitle>
+
+<div class="container">
+    <div class="row">
+        <h4>Course Registration</h4>
+
+        <div class="col-6">
+            <EditForm Model="@model">
+                <DataAnnotationsValidator />
+
+                <div class="mb-3">
+                    <label>Name</label>
+                    <input class="form-control" @bind="model.FullName" />
+                    <ValidationMessage For="@(() => model.FullName)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Email</label>
+                    <input class="form-control" @bind="model.Email" />
+                    <ValidationMessage For="@(() => model.Email)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Phone</label>
+                    <input class="form-control" @bind="model.Phone" />
+                    <ValidationMessage For="@(() => model.Phone)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Course</label>
+                    <select class="form-select" @bind="model.Course">
+                        <option value="">Choose...</option>
+                        <option>HTML CSS</option>
+                        <option>JavaScript</option>
+                        <option>React</option>
+                        <option>.NET</option>
+                    </select>
+                    <ValidationMessage For="@(() => model.Course)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Study Mode</label>
+
+                    <InputRadioGroup @bind-Value="model.StudyMode" TValue="string">
+                        <InputRadio TValue="string" Value='@("Online")' /> Online
+                        <InputRadio TValue="string" Value='@("Offline")' /> Offline
+                    </InputRadioGroup>
+
+                    <ValidationMessage For="@(() => model.StudyMode)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Start Date</label>
+                    <input type="date" class="form-control" @bind="model.StartDate" />
+                    <ValidationMessage For="@(() => model.StartDate)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Notes</label>
+                    <textarea class="form-control" @bind="model.Notes"></textarea>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" @bind="model.Agree" />
+                    <label>I agree</label>
+                    <ValidationMessage For="@(() => model.Agree)" />
+                </div>
+
+                <button class="btn btn-success w-100">Register</button>
+            </EditForm>
+        </div>
+
+        
+    </div>
+</div>
+
+@code {
+    CourseRegistrationModel model = new();
+}
