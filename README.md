@@ -57,6 +57,17 @@ Each folder represents exercises completed in a specific session.
 - Configure routing for multiple pages  
 - Create navigation menu (NavMenu) for page navigation  
 
+### 🔹 BT_Buoi24
+Blazor – Wallet Application (State & Component Communication)
+
+- Build a simple wallet application with deposit and withdraw features
+- Manage state (balance, transactions) in parent component
+- Use component communication (EventCallback) between parent and child
+- Implement modal popup for user input
+- Handle validation (positive amount, withdraw not exceeding balance)
+- Update UI dynamically after each transaction (re-render)
+- Display transaction history with type, amount, and timestamp
+
 ---
 
 ## 🎯 Learning Goals
