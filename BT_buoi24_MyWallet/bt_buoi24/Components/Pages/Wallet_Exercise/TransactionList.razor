@@ -1,0 +1,36 @@
+@if(Transactions == null || Transactions.Count == 0){
+    <div class="alert alert-light text-center">
+        No transactions yet.
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-bordered mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Transactions)
+                {
+                    <tr class="@(item.Type == "Deposit" ? "table-success" : "table-danger")">
+                        <td>@item.Type</td>
+                        <td>$@item.Amount.ToString("0.00")</td>
+                        <td>@item.Time.ToString("dd MMM yyyy HH:mm:ss")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+
+
+@code{
+    [Parameter]
+    public List<TransactionVM> Transactions { get; set; } = new List<TransactionVM>();
+}

@@ -1,0 +1,74 @@
+@if (IsOpen)
+{
+    <div class="modal fade show d-block" tabindex="-1" style="background-color: rgba(0,0,0,0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">@Type Money</h5>
+                    <button type="button" class="btn-close" @onclick="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <label class="form-label">Amount</label>
+                    <input type="number" step="1" class="form-control" @bind="amount" />
+
+                    @if (!string.IsNullOrEmpty(localError))
+                    {
+                        <div class="text-danger mt-2">@localError</div>
+                    }
+                    else if (!string.IsNullOrEmpty(ErrorMessage))
+                    {
+                        <div class="text-danger mt-2">@ErrorMessage</div>
+                    }
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" @onclick="Close">Close</button>
+                    <button class="btn btn-primary" @onclick="Submit">OK</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private decimal amount;
+    private string localError = "";
+
+    [Parameter] public bool IsOpen { get; set; }
+    [Parameter] public string Type { get; set; } = "";
+    [Parameter] public string ErrorMessage { get; set; } = "";
+    [Parameter] public EventCallback<decimal> OnSubmit { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        if (IsOpen)
+        {
+            amount = 1;
+            localError = "";
+        }
+    }
+
+    async Task Submit()
+    {
+        localError = "";
+
+        if (amount <= 0)
+        {
+            localError = "Please enter a valid positive amount.";
+            return;
+        }
+
+        await OnSubmit.InvokeAsync(amount);
+    }
+
+    async Task Close()
+    {
+        amount = 0;
+        localError = "";
+        await OnClose.InvokeAsync();
+    }
+}

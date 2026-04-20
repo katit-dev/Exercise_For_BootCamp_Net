@@ -1,0 +1,91 @@
+@using System.Xml.Serialization
+<div class="container mt-4">
+    <div class="card bg-dark text-white p-4 mx-auto" style="max-width: 700px;">
+        <h2>My Wallet</h2>
+        <div class="text-center mb-4">
+            <h1 class="text-warning">$@balance.ToString("0.00")</h1>
+            <p class="mb-0">Total balance</p>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 mb-4">
+            <button class="btn btn-success" @onclick="OpenDeposit">Deposit</button>
+            <button class="btn btn-danger" @onclick="OpenWithdraw">Withdraw</button>
+        </div>
+
+        <h3 class="text-center mb-3">Transaction History</h3>
+        <TransactionList Transactions="transactions" />
+    </div>
+</div>
+
+<ModalWallet
+    IsOpen="@isOpen"
+    Type="@actionType"
+    ErrorMessage="@errorMessage"
+    OnSubmit="@HandleTransaction"
+    OnClose="@CloseModal" />
+
+
+@code {
+    private decimal balance = 0;
+    private List<TransactionVM> transactions = new List<TransactionVM>();
+
+    @*state mac dinh *@
+    private bool isOpen = false;
+    private string actionType = "";
+    private string errorMessage = "";
+
+    @* Ham de thay doi state theo thao tac *@
+    void OpenDeposit()
+    {
+        actionType = "Deposit";
+        errorMessage = "";
+        isOpen = true;
+    }
+    void OpenWithdraw()
+    {
+        actionType = "Withdraw";
+        errorMessage = "";
+        isOpen = true;
+    }
+    void CloseModal()
+    {
+        isOpen = false;
+        errorMessage = "";
+    }
+
+    @* Ham xu ly giao dich duoc truyen vao Modal *@
+    void HandleTransaction(decimal amount)
+    {
+        errorMessage = "";
+        if(amount <= 0)
+        {
+            errorMessage = "Amount must be greater than zero.";
+            return;
+        }
+         if (actionType == "Withdraw" && amount > balance)
+        {
+            errorMessage = "Withdrawal amount cannot be greater than current balance.";
+            return;
+        }
+
+        if (actionType == "Deposit")
+        {
+            balance += amount;
+        }
+        else if (actionType == "Withdraw")
+        {
+            balance -= amount;
+        }
+
+        transactions.Insert(0, new TransactionVM
+        {
+            Amount = amount,
+            Type = actionType,
+            Time = DateTime.Now
+        });
+
+        isOpen = false;
+        errorMessage = "";
+    }
+
+}
