@@ -68,7 +68,7 @@ Blazor – Wallet Application (State & Component Communication)
 - Update UI dynamically after each transaction (re-render)
 - Display transaction history with type, amount, and timestamp
 
-🔹 BT_Buoi27
+### 🔹 BT_Buoi27
 
 Blazor – State Management (Service & Shared State)
 
@@ -98,14 +98,14 @@ Calculate total price in real-time
 
 ## 📸 Demo
 
-### 🍔 Burger Builder
-![Burger](src/_BaiTap/images/burger.png)
+## 🍔 Burger Builder
+![Burger](images/burger.png)
 
-### 🛒 Shopping Cart
-![Cart](src/_BaiTap/images/cart.png)
+## 🛒 Shopping Cart
+![Cart](images/cart.png)
 
-### 🚗 Change Color Car
-![Car](src/_BaiTap/images/car%20(1).png)
+## 🚗 Change Color Car
+![Car](images/car%20(1).png)
 
 ---
 
