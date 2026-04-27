@@ -68,6 +68,45 @@ Blazor – Wallet Application (State & Component Communication)
 - Update UI dynamically after each transaction (re-render)
 - Display transaction history with type, amount, and timestamp
 
+🔹 BT_Buoi27
+
+Blazor – State Management (Service & Shared State)
+
+Implement state management using Service (Singleton/Scoped)
+Use event callback (Action OnChange) to notify UI updates
+Share data between multiple components
+📌 Exercises:
+
+1. Change Color Car
+
+Change car image dynamically based on selected color
+Manage UI state with shared service
+Highlight selected color button
+
+2. Shopping Cart
+
+Add / remove products in cart
+Update quantity and calculate total price
+Sync data between components using shared state
+
+3. Burger Builder
+
+Customize burger ingredients (salad, beef, cheese, etc.)
+Increase / decrease quantity of each ingredient
+Render burger UI dynamically based on state
+Calculate total price in real-time
+
+## 📸 Demo
+
+### 🍔 Burger Builder
+![Burger](src/_BaiTap/images/burger.png)
+
+### 🛒 Shopping Cart
+![Cart](src/_BaiTap/images/cart.png)
+
+### 🚗 Change Color Car
+![Car](src/_BaiTap/images/car%20(1).png)
+
 ---
 
 ## 🎯 Learning Goals
